@@ -1,0 +1,36 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #191919;
+}
+
+.container {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.container #cover_img {
+  background: url("../static/table_with_bg.jpeg");
+  background-size: cover;
+  position: absolute;
+  height: 533px;
+  width: 711px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-transition: -webkit-clip-path 1s;
+  transition: -webkit-clip-path 1s;
+  transition: clip-path 1s;
+  transition: clip-path 1s, -webkit-clip-path 1s;
+}
+
+.container img {
+  position: absolute;
+  height: 67%;
+}
+/*# sourceMappingURL=main.css.map */

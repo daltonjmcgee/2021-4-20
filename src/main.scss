@@ -1,0 +1,29 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(25,25,25)
+}
+
+.container {
+  position:relative;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+
+  #cover_img {
+    background: url('../static/table_with_bg.jpeg');
+    background-size:cover;
+    position: absolute;
+    height: 533px;
+    width: 711px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 1s;
+  }
+
+  img {
+    position: absolute;
+    height: 67%;
+  }
+}
