@@ -103,4 +103,10 @@ body {
   transition: clip-path 1s ease-in-out;
   transition: clip-path 1s ease-in-out, -webkit-clip-path 1s ease-in-out;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin: .5em;
+}
 /*# sourceMappingURL=main.css.map */
