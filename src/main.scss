@@ -1,29 +1,94 @@
-*, *:before, *:after {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orelega+One&display=swap");
+$backgroundColor: rgba(25,25,25,1);
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(25,25,25)
+  background:$backgroundColor;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 .container {
-  position:relative;
+  position: relative;
   display: grid;
   place-items: center;
   height: 100vh;
 
-  #cover_img {
-    background: url('../static/table_with_bg.jpeg');
-    background-size:cover;
+  .content {
+    width: 40vw;
+    right: 10%;
     position: absolute;
-    height: 533px;
-    width: 711px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    transition: clip-path 1s;
+    z-index: -1;
+    top: 30vh;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    p {
+      color: rgba(255, 255, 255, 0.756);
+      font-family: "Open Sans", Helvetica, sans-serif;
+      font-size: 1.75rem;
+    }
   }
 
-  img {
+  header {
     position: absolute;
-    height: 67%;
+    width: max-content;
+    bottom: 18vh;
+    right: 10%;
+    z-index: 1;
+    background: $backgroundColor;
+    border: 5px solid pink;
+    border-radius: 10px;
+
+    .header-underline {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 0;
+      border-bottom: 0px solid pink;
+    }
+
+    h1 {
+      margin: 0.25em;
+      font-size: 3rem;
+      font-family: "Ortega One", serif;
+      color: pink;
+      text-shadow: 2px 1px $backgroundColor;
+    }
+  }
+
+  #cover_img {
+    border-radius: 10px;
+    border: 5px solid pink;
+    position: absolute;
+    background: url("../static/table_with_bg.png");
+    background-size: cover;
+    height: 30vw;
+    width: 40vw;
+    clip-path: circle(75% at 50% 50%);
+    transition: clip-path 1.25s;
+  }
+
+  #cover_img_filter {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: pink;
+    content: "";
+    opacity: 0;
+  }
+
+  #img {
+    cursor: pointer;
+    background: url("../static/table.png");
+    background-size: cover;
+    position: absolute;
+    height: 30vw;
+    width: 40vw;
+    transition: clip-path 1s ease-in-out;
+
   }
 }
