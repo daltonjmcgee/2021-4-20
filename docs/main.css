@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Orelega+One&display=swap);
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #191919;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.container .content {
+  width: 40vw;
+  right: 10%;
+  position: absolute;
+  z-index: -1;
+  top: 30vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.container .content p {
+  color: rgba(255, 255, 255, 0.756);
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 1.75rem;
+}
+
+.container header {
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  bottom: 18vh;
+  right: 10%;
+  z-index: 1;
+  background: #191919;
+  border: 5px solid pink;
+  border-radius: 10px;
+}
+
+.container header .header-underline {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 0;
+  border-bottom: 0px solid pink;
+}
+
+.container header h1 {
+  margin: 0.25em;
+  font-size: 3rem;
+  font-family: "Ortega One", serif;
+  color: pink;
+  text-shadow: 2px 1px #191919;
+}
+
+.container #cover_img {
+  border-radius: 10px;
+  border: 5px solid pink;
+  position: absolute;
+  background: url(static/195bb290901a87bec6cca7197de20039.png);
+  background-size: cover;
+  height: 30vw;
+  width: 40vw;
+  -webkit-clip-path: circle(75% at 50% 50%);
+          clip-path: circle(75% at 50% 50%);
+  -webkit-transition: -webkit-clip-path 1.25s;
+  transition: -webkit-clip-path 1.25s;
+  transition: clip-path 1.25s;
+  transition: clip-path 1.25s, -webkit-clip-path 1.25s;
+}
+
+.container #cover_img_filter {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: pink;
+  content: "";
+  opacity: 0;
+}
+
+.container #img {
+  cursor: pointer;
+  background: url(static/8a95c8194609f4ea0c64d58c7c308572.png);
+  background-size: cover;
+  position: absolute;
+  height: 30vw;
+  width: 40vw;
+  -webkit-transition: -webkit-clip-path 1s ease-in-out;
+  transition: -webkit-clip-path 1s ease-in-out;
+  transition: clip-path 1s ease-in-out;
+  transition: clip-path 1s ease-in-out, -webkit-clip-path 1s ease-in-out;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin: .5em;
+}
+/*# sourceMappingURL=main.css.map */
+
+/*# sourceMappingURL=main.css.map*/
